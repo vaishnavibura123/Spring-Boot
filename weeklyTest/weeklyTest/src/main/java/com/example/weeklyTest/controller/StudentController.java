@@ -63,9 +63,5 @@ public class StudentController {
         List<Student> students=studentService.getByGreaterAge(age);
         return new ResponseEntity<>(students.toString(),HttpStatus.OK);
     }
-    @GetMapping(value = "/getByFullName")
-    public ResponseEntity<String> getByFullName(@Nullable@RequestParam String fistName, @RequestParam String lastName){
-        List<Student> students=studentService.getStudentByFirstNameOrLastName(fistName, lastName);
-        return new ResponseEntity<>(students.toString(), HttpStatus.OK);
-    }
+   
 }

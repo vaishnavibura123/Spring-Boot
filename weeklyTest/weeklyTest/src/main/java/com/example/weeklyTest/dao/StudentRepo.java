@@ -20,6 +20,5 @@ public interface StudentRepo extends JpaRepository<Student, Integer> {
 
     List<Student> findGreaterByAge(String age);
 
-    @Query(value = "select * from tbl_student where first_name =:firstName or last_name= :lastName",nativeQuery = true)
-    List<Student> findByFirstNameOrLastName(String fistName, String lastName);
+ 
 }

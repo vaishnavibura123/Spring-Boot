@@ -58,10 +58,6 @@ public class StudentController {
         List<Student> students=studentService.getStudentByAge(age);
         return new ResponseEntity<>(students.toString(), HttpStatus.OK);
     }
-    @GetMapping(value = "/getByGreaterAge")
-    public ResponseEntity<String> getByGreaterAge(@RequestParam String age){
-        List<Student> students=studentService.getByGreaterAge(age);
-        return new ResponseEntity<>(students.toString(),HttpStatus.OK);
-    }
+  
    
 }

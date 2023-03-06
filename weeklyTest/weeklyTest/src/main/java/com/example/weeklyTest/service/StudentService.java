@@ -47,9 +47,4 @@ public class StudentService {
         return st;
     }
 
-    public List<Student> getByGreaterAge(String age) {
-        List<Student> st=studentRepo.findGreaterByAge(age);
-        return st;
-    }
-
 }
